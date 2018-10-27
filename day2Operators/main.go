@@ -2,7 +2,9 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"io"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -11,6 +13,16 @@ import (
 // Complete the solve function below.
 func solve(meal_cost float64, tip_percent int32, tax_percent int32) {
 
+	var tip float64
+	var tax float64
+	var total int
+
+	tip = meal_cost * (float64(tip_percent) / 100)
+	//fmt.Printf("%0.2f", tip)
+	tax = meal_cost * (float64(tax_percent) / 100)
+	total = int(math.Round(meal_cost + tax + tip))
+
+	fmt.Printf("%d", total)
 }
 
 func main() {
