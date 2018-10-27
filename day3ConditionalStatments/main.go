@@ -20,7 +20,7 @@ func main() {
 	var resto int
 
 	resto = int(math.Mod(float64(N), 2))
-	fmt.Println(resto)
+	//fmt.Println(resto)
 
 	if resto == 1 {
 		fmt.Println("Weird")
